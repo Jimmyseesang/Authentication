@@ -32,7 +32,7 @@ const RegisterPage = () => {
             id="email"
             name="email"
             placeholder="email..."
-            className="border outline-offset-4 outline-stone-500 border-stone-500 px-4 py-2 rounded-lg"
+            className="border outline-offset-4 outline-stone-500 border-stone-300 px-4 py-4 rounded-2xl"
           />
           {formState.error?.email && (
             <p className="text-sm text-red-600 font-bold text-end">
@@ -50,7 +50,7 @@ const RegisterPage = () => {
               id="password"
               name="password"
               placeholder="password..."
-              className="w-full border outline-offset-4 outline-stone-500 border-stone-500 px-4 py-2 rounded-lg"
+              className="w-full border outline-offset-4 outline-stone-500 border-stone-300 px-4 py-4 rounded-2xl"
             />
             <div
               className="absolute top-1/2 -translate-y-1/2 right-2 h-full aspect-square cursor-pointer flex items-center justify-center"
@@ -78,7 +78,7 @@ const RegisterPage = () => {
             id="cfPassword"
             name="cfPassword"
             placeholder="confirm..."
-            className="border outline-offset-4 outline-stone-500 border-stone-500 px-4 py-2 rounded-lg"
+            className="border outline-offset-4 outline-stone-500 border-stone-300 px-4 py-4 rounded-2xl"
           />
           {formState.error?.cfPassword && (
             <p className="text-sm text-red-600 font-bold text-end">
@@ -86,7 +86,12 @@ const RegisterPage = () => {
             </p>
           )}
         </div>
-        <button className="bg-black rounded-lg text-white px-8 py-2 mt-4 w-full cursor-pointer hover:scale-105 transition-all">
+        {formState.error?._form && (
+          <p className="text-sm text-red-600 font-bold text-end">
+            {formState.error._form}
+          </p>
+        )}
+        <button className="bg-black rounded-2xl text-white px-8 py-4 mt-4 w-full cursor-pointer hover:scale-105 transition-all">
           {isPending ? (
             <i className="fa-solid fa-spinner animate-spin"></i>
           ) : (
@@ -100,7 +105,6 @@ const RegisterPage = () => {
           login
         </Link>
       </p>
-      <Link href={"/"} className="px-4 bg-black text-white py-2 rounded-lg font-bold hover:scale-105 transition-all">Home</Link>
     </main>
   );
 };

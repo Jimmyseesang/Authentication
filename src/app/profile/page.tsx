@@ -8,6 +8,7 @@ const prisma = new PrismaClient();
 
 const ProfilePage = async () => {
   const session = await getServerSession(authOption);
+  console.log(session);
 
   if (!session || !session.user?.email) {
     console.log("Redirect to login page");

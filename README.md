@@ -36,7 +36,21 @@ NEXTAUTH_SECRET=your-random-secret
 GOOGLE_CLIENT_ID="your-google-client-id-here"
 GOOGLE_CLIENT_SECRET="your-google-client-secret-here"
 
-### 3. การใช้งานผ่าน Docker
+### 3. เตรียม Database และ Prisma
+
+``` bash
+npx prisma db push
+npx prisma generate
+```
+
+### 4. เริ่มต้น Server
+
+``` bash
+npm run dev
+```
+
+
+### การใช้งานผ่าน Docker
 
 สร้างไฟล์ .env จาก .env.example
 

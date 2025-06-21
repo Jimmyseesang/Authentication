@@ -16,7 +16,7 @@ const LoginPage = () => {
     if (formState.success) {
       router.push("/");
     }
-  }, [formState]);
+  }, [formState, router]);
 
   return (
     <main className="h-screen w-full flex items-center justify-center flex-col gap-4">
@@ -88,7 +88,7 @@ const LoginPage = () => {
         )}
       </form>
       <p>
-        Don't have an account?{" "}
+        {"Don't have an account? "}
         <Link href={"/auth/register"} className="text-red-600 underline">
           register
         </Link>

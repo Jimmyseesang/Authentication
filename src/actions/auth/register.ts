@@ -1,6 +1,5 @@
 import axios from "axios";
 import { z } from "zod";
-import { redirect } from "next/navigation";
 
 const regisSchema = z.object({
   email: z

@@ -14,7 +14,7 @@ const RegisterPage = () => {
     if (formState.success) {
       router.push("/auth/login");
     }
-  }, [formState]);
+  }, [formState, router]);
 
   return (
     <main className="h-screen w-full flex items-center justify-center flex-col gap-8">
